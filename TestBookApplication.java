@@ -3,12 +3,12 @@ public class TestBookApplication {
         System.out.println("~~~ Running Test Cases ~~~");
 
 
-        PrintedBook pb1 = new PrintedBook("Java Programming", "John Doe", "Education", 300, 29.99);
-        PrintedBook pb2 = new PrintedBook("Python Basics", "Jane Smith", "Education", 250, 24.99);
+        PrintedBook pb1 = new PrintedBook("Sorcerer's Stone", "J.K. Rowling", "Sci-Fi", 500, 29.99);
+        PrintedBook pb2 = new PrintedBook("The Hobbit", "R. Tolkien", "Drama", 700, 24.99);
 
 
-        AudioBook ab1 = new AudioBook("Mystery Novel", "Author X", "Mystery", 480, 19.99);
-        AudioBook ab2 = new AudioBook("Sci-Fi Adventure", "Author Y", "Sci-Fi", 360, 15.99);
+        AudioBook ab1 = new AudioBook("Pride and Prejudice", "Jane Austen", "Romance", 600, 19.99);
+        AudioBook ab2 = new AudioBook("Better than the Movies", "Lynn Painter", "Romance", 618, 15.99);
 
 
         System.out.println("Printed book cost: " + pb1.calculateCost());
@@ -20,8 +20,8 @@ public class TestBookApplication {
 
 
         Book sampleBook = Book.getAllBooks().get(0);
-        System.out.println("Education books: " + sampleBook.getNumBooksPerGenre("Education"));
-        System.out.println("Mystery books: " + sampleBook.getNumBooksPerGenre("Mystery"));
+        System.out.println("Romance books: " + sampleBook.getNumBooksPerGenre("Romance"));
+        System.out.println("Drama books: " + sampleBook.getNumBooksPerGenre("Drama"));
 
 
         System.out.println("Total Cost: $" + sampleBook.getTotalCost());
@@ -30,6 +30,6 @@ public class TestBookApplication {
         System.out.println(PrintedBook.displayLastThreePrinted());
         System.out.println(AudioBook.displayLastThreeAudio());
 
-        System.out.println("All tests completed successfully!");
+        System.out.println("Tests completed successfully.");
     }
 }
