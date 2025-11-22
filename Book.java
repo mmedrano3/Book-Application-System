@@ -60,6 +60,14 @@ public abstract class Book implements BookInterface {
         allBooks.add(book);
     }
 
+    public static double getAverageCost() {
+        if (allBooks.isEmpty()) return 0;
+        double total = 0;
+        for (Book book : allBooks) {
+            total += book.getCost();
+        }
+        return total / allBooks.size();
+    }
     @Override
     public String toString() {
         return String.format("Title: %s, Author: %s, Genre: %s, Cost: $%.2f",
