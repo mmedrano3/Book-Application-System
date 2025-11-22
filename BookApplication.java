@@ -177,8 +177,8 @@ public class BookApplication {
         System.out.println("\n~~~ Average Information ~~~");
         System.out.printf("Average pages per printed book: %.2f%n", PrintedBook.getAveragePages());
         System.out.printf("Average length per audio book: %.2f minutes%n", AudioBook.getAverageLength());
+        System.out.printf("Average cost per book: $%.2f%n", Book.getAverageCost());
     }
-
     private static void saveBooksToFile() {
         List<Book> allBooks = Book.getAllBooks();
         if (allBooks.isEmpty()) {
